@@ -1,18 +1,18 @@
-#ifndef _M5_DIGITAL_CLOCK_H_
-#define _M5_DIGITAL_CLOCK_H_
+#ifndef _M5UNIT_DIGI_CLOCK_H_
+#define _M5UNIT_DIGI_CLOCK_H_
 
 #include <Arduino.h>
 #include <Wire.h>
 
-#define M5_DIGITAL_CLOCK_DEFAULT_ADDR   0x30
-#define M5_DIGITAL_CLOCK_NUMBER_REG     0x00
-#define M5_DIGITAL_CLOCK_ASCII_REG      0x10
-#define M5_DIGITAL_CLOCK_STRING_REG     0x20
-#define M5_DIGITAL_CLOCK_BRIGHTNESS_REG 0x30
+#define M5UNIT_DIGI_CLOCK_DEFAULT_ADDR   0x30
+#define M5UNIT_DIGI_CLOCK_NUMBER_REG     0x00
+#define M5UNIT_DIGI_CLOCK_ASCII_REG      0x10
+#define M5UNIT_DIGI_CLOCK_STRING_REG     0x20
+#define M5UNIT_DIGI_CLOCK_BRIGHTNESS_REG 0x30
 
-#define M5_DIGITAL_CLOCK_FW_VERSION_REG 0xFE
+#define M5UNIT_DIGI_CLOCK_FW_VERSION_REG 0xFE
 
-class M5_DIGITAL_CLOCK {
+class M5UNIT_DIGI_CLOCK {
    private:
     uint8_t _addr;
     TwoWire *_wire;
@@ -23,7 +23,7 @@ class M5_DIGITAL_CLOCK {
 
    public:
     bool begin(TwoWire *wire = &Wire, uint8_t sda = 21, uint8_t scl = 22,
-               uint8_t addr = M5_DIGITAL_CLOCK_DEFAULT_ADDR);
+               uint8_t addr = M5UNIT_DIGI_CLOCK_DEFAULT_ADDR);
 
     bool setBrightness(uint8_t brightness);
 
