@@ -1,7 +1,7 @@
 #include "M5Stack.h"
-#include "M5_DIGITAL_CLOCK.h"
+#include "M5UNIT_DIGI_CLOCK.h"
 
-M5_DIGITAL_CLOCK Digiclock;
+M5UNIT_DIGI_CLOCK Digiclock;
 
 void setup() {
     M5.begin(1, 0, 1);
