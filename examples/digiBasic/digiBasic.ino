@@ -4,10 +4,12 @@
 /* For M5Stack Basic */
 #define SDA 21
 #define SCL 22
+#define ADD 0x30
 
 /* For M5Atom Lite/Matrix */
 // #define SDA 26
 // #define SCL 32
+// #define ADD 0x30
 
 M5UNIT_DIGI_CLOCK Digiclock;
 
@@ -18,7 +20,7 @@ void setup()
     Wire.begin(SDA, SCL);
 
     /* Digital clock init */
-    if (Digiclock.begin(&Wire, SDA, SCL)) 
+    if (Digiclock.begin(&Wire, SDA, SCL, ADD)) 
     {
         Serial.println("Digital clock init successful");
     } 
@@ -77,13 +79,13 @@ void loop()
     Digiclock.setBrightness(9);
     for (;;) 
     {
-        char *buff2 = "12:00";
+        char buff2[] =  "12:00";
         Digiclock.setString(buff2);
-        Serial.println(buff2);
+        Serial.printf(buff2);
         delay(1000);
-        char *buff3 = "1200";
+        char buff3[] =  "1200";
         Digiclock.setString(buff3);
-        Serial.println(buff3);
+        Serial.printf(buff3);
         delay(1000);
     }
     delay(100);
