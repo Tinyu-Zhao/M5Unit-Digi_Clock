@@ -1,0 +1,27 @@
+#######################################
+# Syntax Coloring Map For Digi_Clock
+#######################################
+ 
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+ 
+M5UNIT_DIGI_CLOCK KEYWORD1
+ 
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+ 
+begin KEYWORD2
+writeBytes KEYWORD2
+readBytes KEYWORD2
+setBrightness KEYWORD2
+setASCII KEYWORD2
+setSegments KEYWORD2
+setString KEYWORD2
+getVersion KEYWORD2
+ 
+#######################################
+# Constants (LITERAL1)
+#######################################
+

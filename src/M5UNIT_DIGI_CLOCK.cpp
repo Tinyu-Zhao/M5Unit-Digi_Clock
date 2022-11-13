@@ -8,7 +8,7 @@ bool M5UNIT_DIGI_CLOCK::begin(TwoWire *wire, uint8_t sda, uint8_t scl,
     _scl  = scl;
     _wire->begin((int)_sda, (int)_scl);
     delay(10);
-    _wire->beginTransmission(_addr);
+    _wire->beginTransmission((uint8_t) _addr);
     uint8_t error = _wire->endTransmission();
     if (error == 0) {
         return true;
